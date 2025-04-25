@@ -57,7 +57,7 @@ jobs:
       run: go get .
 
     - name: Run Migrations
-      run: migrate -path db/migration -database "postgresql://postgres:dics@localhost:5532/simple_bank?sslmode=disable" -verbose up
+      run: migrate -path db/migration -database "postgresql://postgres:dics@127.0.0.1:5532/simple_bank?sslmode=disable" -verbose up
 
     - name: Test
       run: go test ./...

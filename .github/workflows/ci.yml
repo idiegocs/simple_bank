@@ -26,7 +26,8 @@ jobs:
     - name: check out code into the module directory
       uses: actions/checkout@v2
     
-
+    - name: Install dependencies
+      run: go get .
 
     - name: Test
-      run: ./configure && make test
+      run: go test

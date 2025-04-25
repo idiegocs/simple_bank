@@ -37,7 +37,7 @@ jobs:
     steps:
 
     - name: Install migration
-      run: apt-get install migrate
+      run: sudo apt-get -y install migrate
 
     - name: Set up Go
       uses: actions/setup-go@v2

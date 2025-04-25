@@ -35,6 +35,11 @@ jobs:
     
     
     steps:
+    - name: bajar depen
+      run:  curl -s https://packagecloud.io/install/repositories/golang-migrate/migrate/script.deb.sh | sudo bash
+
+    - name: update ubuntu 
+      run: sudo apt-get update
 
     - name: Install migration
       run: sudo apt-get -y install migrate
